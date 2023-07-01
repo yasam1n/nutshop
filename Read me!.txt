@@ -4,5 +4,8 @@ Password: admin1
 User1:  tehran021
 password: customer1
 
+User2: mashhad
+Password: customer2
+
 address:
 https://yasminalipour.pythonanywhere.com/
