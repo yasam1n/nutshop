@@ -1,0 +1,8 @@
+Super User: admina
+Password: admin1
+
+User1:  tehran021
+password: customer1
+
+address:
+https://yasminalipour.pythonanywhere.com/
