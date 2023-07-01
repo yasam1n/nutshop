@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style>
+	.city_l {
+		
+		margin:50px;
+	 position: relative;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background-image: url('static/image/contact.jpg');
+  background-size: cover;
+  background-position: center;
+	z-index: 1;
+	}
+	.city_l::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: -1;
+	}
+	
+	.city_l h1{
+		color: white;
+	}
+	
+</style>
+
+	<title>Nuts Shop - Home</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+</head>
+<body>
+	<header>
+<br>
+
+		<div class="container">
+			<div class="content" >
+				<h1>فروش عمده خشکبار</h1>
+				<p>قابلیت ارسال به تمام کشور</p>
+				<br>
+				<button class="buy-btn"  onclick="window.location.href='{% url 'account_control' %}'">خرید</button>
+			</div>
+		</div>
+
+		
+	</header>
+<br>
+	<div class="features">
+		<h2>بهترین را با ما تجربه کنید</h2>
+		<p> تضمین کیفیت عالی</p>
+		<p> ارسال در کمترین زمان ممکن</p>
+		<br>
+	</div>
+	
+	<br>
+
+
+	
+
+
+	<div class="city_l">
+		
+			<h1> شهر هایی که فروشگاه خشکبار یاسی در آن ها نمایندگی فعال دارد: </h1> 
+			<p>
+			{% for city in object_list %}
+
+			
+			 {{ city.name }} 
+			{% endfor %}</p>
+		
+	</div>
+	<br>
+	
+
+
+</body>
+</html>
+
+{% endblock content %}
